@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "GFG to X Poster (Shourya Pratik)",
+    "version": "1.0",
+    "description": "Post GFG problems to X with manual day input. No screenshot.",
+    "permissions": ["tabs"],
+    "host_permissions": [
+      "https://www.geeksforgeeks.org/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+         
+          "https://www.geeksforgeeks.org/batch/gfg-160-problems/track/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
